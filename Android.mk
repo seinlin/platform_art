@@ -133,9 +133,9 @@ ART_TARGET_DEPENDENCIES := \
 # All the dependencies that must be built ahead of sync-ing them onto the target device.
 TEST_ART_TARGET_SYNC_DEPS := $(ADB_EXECUTABLE)
 
-include $(art_path)/build/Android.common_test.mk
-include $(art_path)/build/Android.gtest.mk
-include $(art_path)/test/Android.run-test.mk
+#include $(art_path)/build/Android.common_test.mk
+#include $(art_path)/build/Android.gtest.mk
+#include $(art_path)/test/Android.run-test.mk
 
 TEST_ART_TARGET_SYNC_DEPS += $(ART_TEST_TARGET_GTEST_DEPENDENCIES) $(ART_TEST_TARGET_RUN_TEST_DEPENDENCIES)
 

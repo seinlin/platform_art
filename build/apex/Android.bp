@@ -240,19 +240,10 @@ apex_defaults {
     manifest: "manifest-art.json",
     bootclasspath_fragments: ["art-bootclasspath-fragment"],
     compat_configs: ["libcore-platform-compat-config"],
-    java_libs: libcore_java_libs,
-    native_shared_libs: art_runtime_base_native_shared_libs +
-        art_runtime_base_native_device_only_shared_libs +
-        libcore_native_shared_libs,
+    native_shared_libs: bionic_native_shared_libs,
     multilib: {
         both: {
-            binaries: art_runtime_base_binaries_both +
-                art_runtime_base_binaries_both_on_device_first_on_host,
-        },
-        first: {
-            binaries: art_runtime_base_binaries_first_on_device_first_on_host +
-                art_tools_common_binaries +
-                art_tools_device_only_binaries,
+            binaries:  bionic_binaries_both,
         },
     },
     key: "com.android.art.key",
